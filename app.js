@@ -1,14 +1,51 @@
-const toggleList = document.getElementById('toggleList');
-const listDiv = document.querySelector('.list');
-const descriptionInput = document.querySelector('input.description');
-const descriptionP = document.querySelector('p.description');
-const descriptionButton = document.querySelector('button.description');
-const listUl = listDiv.querySelector('ul');
-const addItemInput = document.querySelector('input.addItemInput');
-const addItemButton = document.querySelector('button.addItemButton');
-const lis = listUl.children;
-const firstListItem = listUl.firstElementChild;
-const lastListItem = listUl.lastElementChild;
+
+
+var button = document.createElement("button");
+button.innerHTML = "CNN";
+
+// 2. Append somewhere
+var body = document.getElementsByTagName("body")[0];
+body.appendChild(button);
+
+// 3. Add event handler
+button.addEventListener ("click", function() {
+  alert("News update");
+});
+
+var button = document.createElement("button");
+button.innerHTML = "BBC";
+
+// 2. Append somewhere
+var body = document.getElementsByTagName("body")[0];
+body.appendChild(button);
+
+// 3. Add event handler
+button.addEventListener ("click", function() {
+  alert("News update");
+});
+
+var button = document.createElement("button");
+button.innerHTML = "CNBC";
+
+// 2. Append somewhere
+var body = document.getElementsByTagName("body")[0];
+body.appendChild(button);
+
+// 3. Add event handler
+button.addEventListener ("click", function() {
+  alert("News update");
+});
+
+
+var url = 'http://newsapi.org/v2/top-headlines?' +
+          'country=us&' +
+          'apiKey=926ea2a6d4474d838091fd2e96217ef0';
+var req = new Request(url);
+fetch(req)
+    .then(function(response) {
+        console.log(response.json());
+    })
+
 
 firstListItem.style.backgroundColor = 'none';
 lastListItem.style.backgroundColor = 'none';
@@ -61,11 +98,4 @@ toggleList.addEventListener('click', () => {
         descriptionInput.value = '';
     });
 
-    addItemButton.addEventListener('click', () => {
-      let ul = document.getElementsByTagName('ul')[0];
-      let li = document.createElement('li');
-      li.textContent = addItemInput.value;
-      attachListItemButtons(li);
-       ul.appendChild(li);
-       addItemInput.value = '';
-    });
+    
