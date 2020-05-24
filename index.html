@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>News Updates With Naseem Orfany</title>
+    <title>Global News Updates</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <h1 id="myHeading">News Updates with Naseem Orfany</h1>
+    <h1 id="myHeading">Global News Updates</h1>
     <p>Bringing you the latest!</p>
-    <div class="list">
-    <p class="description">News Headlines</p>
-
-    <input type="text" class="description">
-    <button class="description">Search the latest</button>
     <div id="click" onClick="Location.href='http://www.google.com';"style="cursor:pointer;"></div>
-    <ul>
-      <li>BBC</li>
-      <li>CNN</li>
-      <li>CNBC</li>
-      <li>RT</li>
-    </ul>
     </div>
     <script src="app.js"></script>
+    <button onclick="makeFetch('cnn')">CNN</button>
+    <button onclick="makeFetch('bbc-news')">BBC</button>
+    <button onclick="makeFetch('cnbc')">CNBC</button>
+    <button onclick="makeFetch('al-jazeera-english')">Al-Jazeera</button>
+    <button onclick="makeFetch('associated-press')">Associated Press</button>
+    <button onclick="makeFetch('espn')">ESPN</button>
+    <button onclick="makeFetch('financial-post')">Financial Post</button>
+    <button onclick="makeFetch('google-news')">Google News</button>
+    <footer>
+      <h2>www.globalnews.com copyright &copy;2020</h2>
+    </footer>
   </body>
 </html>
