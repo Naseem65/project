@@ -21,6 +21,7 @@ h1 + p {
   padding-bottom: 2em;
   border-bottom: 1px dotted;
 }
+
 ul {
   padding-left: 0;
   list-style: none;
@@ -49,6 +50,7 @@ div {
 }
 
 /* Buttons */
+
 button {
   color: red;
   background: red;
@@ -70,6 +72,8 @@ button {
   border: solid 1px grey;
 }
 
+/*Footer start*/
+
 footer h2 {
  font-size: 1rem;
     font-style: normal; 
@@ -83,6 +87,8 @@ footer h2 {
     background-color: rgba(56, 55, 55, 0.007);
     text-align: center;
 }
+
+/*Footer end*/
 
 p + p {
   color: black;
